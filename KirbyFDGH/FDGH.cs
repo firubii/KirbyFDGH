@@ -73,7 +73,6 @@ namespace KirbyFDGH
             {
                 uint pos = (uint)reader.BaseStream.Position + 4;
                 reader.BaseStream.Seek(reader.ReadUInt32(), SeekOrigin.Begin);
-                Console.WriteLine($"{i}: 0x{(pos - 4).ToString("X8")} --> 0x{reader.BaseStream.Position.ToString("X8")}");
                 StringList.Add(Encoding.UTF8.GetString(reader.ReadBytes(reader.ReadInt32())));
                 reader.BaseStream.Seek(pos, SeekOrigin.Begin);
             }
