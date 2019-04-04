@@ -46,19 +46,25 @@ namespace KirbyFDGH
             if (endianness.SequenceEqual(new byte[] { 0x34, 0x12 }))
             {
                 Endianness = Endianness.Little;
+            }
+            else
+            {
+                Endianness = Endianness.Big;
+            }
+            reader.Endianness = Endianness;
+            XbinVersion = reader.ReadByte();
+            if (XbinVersion == 4)
+            {
                 fileListOffs = 0x1C;
                 sceneListOffs = 0x20;
                 stringListOffs = 0x24;
             }
             else
             {
-                Endianness = Endianness.Big;
                 fileListOffs = 0x18;
                 sceneListOffs = 0x1C;
                 stringListOffs = 0x20;
             }
-            reader.Endianness = Endianness;
-            XbinVersion = reader.ReadByte();
 
             reader.BaseStream.Seek(stringListOffs, SeekOrigin.Begin);
             reader.BaseStream.Seek(reader.ReadUInt32(), SeekOrigin.Begin);
@@ -67,6 +73,7 @@ namespace KirbyFDGH
             {
                 uint pos = (uint)reader.BaseStream.Position + 4;
                 reader.BaseStream.Seek(reader.ReadUInt32(), SeekOrigin.Begin);
+                Console.WriteLine($"{i}: 0x{(pos - 4).ToString("X8")} --> 0x{reader.BaseStream.Position.ToString("X8")}");
                 StringList.Add(Encoding.UTF8.GetString(reader.ReadBytes(reader.ReadInt32())));
                 reader.BaseStream.Seek(pos, SeekOrigin.Begin);
             }
