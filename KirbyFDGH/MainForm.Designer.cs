@@ -33,6 +33,13 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xBINSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.endiannessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bigEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.littleEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xBINVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.fileListTab = new System.Windows.Forms.TabPage();
             this.removeFile = new System.Windows.Forms.Button();
@@ -54,13 +61,6 @@
             this.sceneList = new System.Windows.Forms.ListBox();
             this.stringListTab = new System.Windows.Forms.TabPage();
             this.stringList = new System.Windows.Forms.ListBox();
-            this.xBINSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xBINVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.endiannessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bigEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.littleEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.fileListTab.SuspendLayout();
@@ -118,6 +118,61 @@
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // xBINSettingsToolStripMenuItem
+            // 
+            this.xBINSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.endiannessToolStripMenuItem,
+            this.xBINVersionToolStripMenuItem});
+            this.xBINSettingsToolStripMenuItem.Name = "xBINSettingsToolStripMenuItem";
+            this.xBINSettingsToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.xBINSettingsToolStripMenuItem.Text = "XBIN Settings";
+            // 
+            // endiannessToolStripMenuItem
+            // 
+            this.endiannessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bigEndianToolStripMenuItem,
+            this.littleEndianToolStripMenuItem});
+            this.endiannessToolStripMenuItem.Name = "endiannessToolStripMenuItem";
+            this.endiannessToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.endiannessToolStripMenuItem.Text = "Endianness";
+            // 
+            // bigEndianToolStripMenuItem
+            // 
+            this.bigEndianToolStripMenuItem.Name = "bigEndianToolStripMenuItem";
+            this.bigEndianToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.bigEndianToolStripMenuItem.Text = "Big Endian";
+            this.bigEndianToolStripMenuItem.Click += new System.EventHandler(this.bigEndianToolStripMenuItem_Click);
+            // 
+            // littleEndianToolStripMenuItem
+            // 
+            this.littleEndianToolStripMenuItem.Name = "littleEndianToolStripMenuItem";
+            this.littleEndianToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.littleEndianToolStripMenuItem.Text = "Little Endian";
+            this.littleEndianToolStripMenuItem.Click += new System.EventHandler(this.littleEndianToolStripMenuItem_Click);
+            // 
+            // xBINVersionToolStripMenuItem
+            // 
+            this.xBINVersionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version2ToolStripMenuItem,
+            this.version4ToolStripMenuItem});
+            this.xBINVersionToolStripMenuItem.Name = "xBINVersionToolStripMenuItem";
+            this.xBINVersionToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.xBINVersionToolStripMenuItem.Text = "XBIN Version";
+            // 
+            // version2ToolStripMenuItem
+            // 
+            this.version2ToolStripMenuItem.Name = "version2ToolStripMenuItem";
+            this.version2ToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.version2ToolStripMenuItem.Text = "Version 2 (RtDL ,TDX, KPR)";
+            this.version2ToolStripMenuItem.Click += new System.EventHandler(this.version2ToolStripMenuItem_Click);
+            // 
+            // version4ToolStripMenuItem
+            // 
+            this.version4ToolStripMenuItem.Name = "version4ToolStripMenuItem";
+            this.version4ToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.version4ToolStripMenuItem.Text = "Version 4 (KBR, KSA)";
+            this.version4ToolStripMenuItem.Click += new System.EventHandler(this.version4ToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -334,61 +389,6 @@
             this.stringList.Size = new System.Drawing.Size(588, 342);
             this.stringList.TabIndex = 0;
             // 
-            // xBINSettingsToolStripMenuItem
-            // 
-            this.xBINSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.endiannessToolStripMenuItem,
-            this.xBINVersionToolStripMenuItem});
-            this.xBINSettingsToolStripMenuItem.Name = "xBINSettingsToolStripMenuItem";
-            this.xBINSettingsToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.xBINSettingsToolStripMenuItem.Text = "XBIN Settings";
-            // 
-            // xBINVersionToolStripMenuItem
-            // 
-            this.xBINVersionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version2ToolStripMenuItem,
-            this.version4ToolStripMenuItem});
-            this.xBINVersionToolStripMenuItem.Name = "xBINVersionToolStripMenuItem";
-            this.xBINVersionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xBINVersionToolStripMenuItem.Text = "XBIN Version";
-            // 
-            // endiannessToolStripMenuItem
-            // 
-            this.endiannessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bigEndianToolStripMenuItem,
-            this.littleEndianToolStripMenuItem});
-            this.endiannessToolStripMenuItem.Name = "endiannessToolStripMenuItem";
-            this.endiannessToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.endiannessToolStripMenuItem.Text = "Endianness";
-            // 
-            // bigEndianToolStripMenuItem
-            // 
-            this.bigEndianToolStripMenuItem.Name = "bigEndianToolStripMenuItem";
-            this.bigEndianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bigEndianToolStripMenuItem.Text = "Big Endian";
-            this.bigEndianToolStripMenuItem.Click += new System.EventHandler(this.bigEndianToolStripMenuItem_Click);
-            // 
-            // littleEndianToolStripMenuItem
-            // 
-            this.littleEndianToolStripMenuItem.Name = "littleEndianToolStripMenuItem";
-            this.littleEndianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.littleEndianToolStripMenuItem.Text = "Little Endian";
-            this.littleEndianToolStripMenuItem.Click += new System.EventHandler(this.littleEndianToolStripMenuItem_Click);
-            // 
-            // version2ToolStripMenuItem
-            // 
-            this.version2ToolStripMenuItem.Name = "version2ToolStripMenuItem";
-            this.version2ToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.version2ToolStripMenuItem.Text = "Version 2 (RtDL ,TDX, KPR)";
-            this.version2ToolStripMenuItem.Click += new System.EventHandler(this.version2ToolStripMenuItem_Click);
-            // 
-            // version4ToolStripMenuItem
-            // 
-            this.version4ToolStripMenuItem.Name = "version4ToolStripMenuItem";
-            this.version4ToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.version4ToolStripMenuItem.Text = "Version 4 (KBR, KSA)";
-            this.version4ToolStripMenuItem.Click += new System.EventHandler(this.version4ToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +400,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kirby FDGH Editor";
+            this.Text = "Kirby FDG Editor";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
