@@ -49,6 +49,7 @@
     <Compile Include="EndianBinaryWriter.cs" />
     <Compile Include="Endianness.cs" />
     <Compile Include="FDGH.cs" />
+    <Compile Include="FNV1a.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

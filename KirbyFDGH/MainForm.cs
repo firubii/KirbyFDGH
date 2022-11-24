@@ -31,42 +31,33 @@ namespace KirbyFDGH
 
             fileList.Items.Clear();
             sceneList.Items.Clear();
-            ag1List.Items.Clear();
-            ag2List.Items.Clear();
+            depsList.Items.Clear();
+            assetList.Items.Clear();
             stringList.Items.Clear();
 
             fileList.BeginUpdate();
             sceneList.BeginUpdate();
-            ag1List.BeginUpdate();
-            ag2List.BeginUpdate();
+            depsList.BeginUpdate();
+            assetList.BeginUpdate();
             stringList.BeginUpdate();
 
             for (int i = 0; i < archive.FileList.Count; i++)
-            {
                 fileList.Items.Add(archive.FileList[i]);
-            }
 
             for (int i = 0; i < archive.SceneList.Count; i++)
-            {
                 sceneList.Items.Add(archive.SceneList[i].Name);
-            }
 
             if (sceneList.SelectedItem != null)
             {
-                for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].AssetGroup1.Count; i++)
-                {
-                    ag1List.Items.Add(archive.SceneList[sceneList.SelectedIndex].AssetGroup1[i]);
-                }
-                for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].AssetGroup2.Count; i++)
-                {
-                    ag2List.Items.Add(archive.SceneList[sceneList.SelectedIndex].AssetGroup2[i]);
-                }
+                for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].Dependencies.Count; i++)
+                    depsList.Items.Add(archive.SceneList[sceneList.SelectedIndex].Dependencies[i]);
+
+                for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].AssetList.Count; i++)
+                    assetList.Items.Add(archive.SceneList[sceneList.SelectedIndex].AssetList[i]);
             }
 
             for (int i = 0; i < archive.StringList.Count; i++)
-            {
                 stringList.Items.Add(archive.StringList[i]);
-            }
 
             fileList.SelectedIndex = fileSel;
             sceneList.SelectedIndex = sceneSel;
@@ -74,34 +65,35 @@ namespace KirbyFDGH
 
             fileList.EndUpdate();
             sceneList.EndUpdate();
-            ag1List.EndUpdate();
-            ag2List.EndUpdate();
+            depsList.EndUpdate();
+            assetList.EndUpdate();
             stringList.EndUpdate();
         }
 
         public void RefreshAssetGroups()
         {
-            ag1List.Items.Clear();
-            ag2List.Items.Clear();
-            ag1List.BeginUpdate();
-            ag2List.BeginUpdate();
-            for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].AssetGroup1.Count; i++)
-            {
-                ag1List.Items.Add(archive.SceneList[sceneList.SelectedIndex].AssetGroup1[i]);
-            }
-            for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].AssetGroup2.Count; i++)
-            {
-                ag2List.Items.Add(archive.SceneList[sceneList.SelectedIndex].AssetGroup2[i]);
-            }
-            ag1List.EndUpdate();
-            ag2List.EndUpdate();
+            depsList.Items.Clear();
+            assetList.Items.Clear();
+            depsList.BeginUpdate();
+            assetList.BeginUpdate();
+
+            for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].Dependencies.Count; i++)
+                depsList.Items.Add(archive.SceneList[sceneList.SelectedIndex].Dependencies[i]);
+
+            for (int i = 0; i < archive.SceneList[sceneList.SelectedIndex].AssetList.Count; i++)
+                assetList.Items.Add(archive.SceneList[sceneList.SelectedIndex].AssetList[i]);
+
+            depsList.EndUpdate();
+            assetList.EndUpdate();
         }
 
         public void Save()
         {
             this.Enabled = false;
             this.Cursor = Cursors.WaitCursor;
+
             archive.Write(filepath);
+
             this.Enabled = true;
             this.Cursor = Cursors.Arrow;
         }
@@ -182,8 +174,8 @@ namespace KirbyFDGH
             {
                 FDGH.Scene scene = new FDGH.Scene();
                 scene.Name = strWindow.input;
-                scene.AssetGroup1 = new List<string>();
-                scene.AssetGroup2 = new List<string>();
+                scene.Dependencies = new List<string>();
+                scene.AssetList = new List<string>();
                 archive.SceneList.Add(scene);
                 sceneList.Items.Add(strWindow.input);
             }
@@ -201,24 +193,28 @@ namespace KirbyFDGH
         private void ag1Add_Click(object sender, EventArgs e)
         {
             DropDownWindow ddWindow = new DropDownWindow();
-            ddWindow.options = archive.StringList.ToArray();
+            string[] options = new string[archive.SceneList.Count];
+            for (int i = 0; i < options.Length; i++)
+                options[i] = archive.SceneList[i].Name;
+            ddWindow.options = options;
+
             if (ddWindow.ShowDialog() == DialogResult.OK)
             {
                 FDGH.Scene scene = archive.SceneList[sceneList.SelectedIndex];
-                List<string> ag = scene.AssetGroup1;
+                List<string> ag = scene.Dependencies;
                 ag.Add(ddWindow.input);
-                scene.AssetGroup1 = ag;
+                scene.Dependencies = ag;
                 archive.SceneList[sceneList.SelectedIndex] = scene;
-                ag1List.Items.Add(ddWindow.input);
+                depsList.Items.Add(ddWindow.input);
             }
         }
 
         private void ag1Remove_Click(object sender, EventArgs e)
         {
-            if (ag1List.SelectedItem != null)
+            if (depsList.SelectedItem != null)
             {
-                archive.SceneList[sceneList.SelectedIndex].AssetGroup1.RemoveAt(ag1List.SelectedIndex);
-                ag1List.Items.RemoveAt(ag1List.SelectedIndex);
+                archive.SceneList[sceneList.SelectedIndex].Dependencies.RemoveAt(depsList.SelectedIndex);
+                depsList.Items.RemoveAt(depsList.SelectedIndex);
             }
         }
 
@@ -229,20 +225,20 @@ namespace KirbyFDGH
             if (ddWindow.ShowDialog() == DialogResult.OK)
             {
                 FDGH.Scene scene = archive.SceneList[sceneList.SelectedIndex];
-                List<string> ag = scene.AssetGroup2;
+                List<string> ag = scene.AssetList;
                 ag.Add(ddWindow.input);
-                scene.AssetGroup2 = ag;
+                scene.AssetList = ag;
                 archive.SceneList[sceneList.SelectedIndex] = scene;
-                ag2List.Items.Add(ddWindow.input);
+                assetList.Items.Add(ddWindow.input);
             }
         }
 
         private void ag2Remove_Click(object sender, EventArgs e)
         {
-            if (ag2List.SelectedItem != null)
+            if (assetList.SelectedItem != null)
             {
-                archive.SceneList[sceneList.SelectedIndex].AssetGroup2.RemoveAt(ag2List.SelectedIndex);
-                ag2List.Items.RemoveAt(ag2List.SelectedIndex);
+                archive.SceneList[sceneList.SelectedIndex].AssetList.RemoveAt(assetList.SelectedIndex);
+                assetList.Items.RemoveAt(assetList.SelectedIndex);
             }
         }
 
@@ -262,7 +258,7 @@ namespace KirbyFDGH
             save.AddExtension = true;
             save.DefaultExt = ".dat";
             save.Filter = "FDGH Data Files|*.dat";
-            save.Title = "Specify where to save the file";
+            save.Title = "Save As";
             if (save.ShowDialog() == DialogResult.OK)
             {
                 filepath = save.FileName;
