@@ -39,6 +39,7 @@ namespace KirbyFDGH
                 SceneList = new List<Scene>();
                 StringList = new List<string>();
 
+                uint versOffs = 0x14;
                 uint fileListOffs = 0x18;
                 uint sceneListOffs = 0x1C;
                 uint stringListOffs = 0x20;
@@ -51,14 +52,15 @@ namespace KirbyFDGH
                     Endianness = Endianness.Big;
                 reader.Endianness = Endianness;
                 XbinVersion = reader.ReadByte();
-                if (XbinVersion == 4)
+                if (XbinVersion >= 4)
                 {
+                    versOffs += 4;
                     fileListOffs += 4;
                     sceneListOffs += 4;
                     stringListOffs += 4;
                 }
 
-                reader.BaseStream.Seek(0x18, SeekOrigin.Begin);
+                reader.BaseStream.Seek(versOffs, SeekOrigin.Begin);
                 FDGVersion = reader.ReadUInt32();
 
                 reader.BaseStream.Seek(stringListOffs, SeekOrigin.Begin);
