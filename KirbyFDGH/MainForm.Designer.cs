@@ -28,514 +28,472 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xBINSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.endiannessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bigEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.littleEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xBINVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.fileListTab = new System.Windows.Forms.TabPage();
-            this.removeFile = new System.Windows.Forms.Button();
-            this.addFile = new System.Windows.Forms.Button();
-            this.fileList = new System.Windows.Forms.ListBox();
-            this.sceneListTab = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.assetGroup1Tab = new System.Windows.Forms.TabPage();
-            this.ag1Remove = new System.Windows.Forms.Button();
-            this.ag1Add = new System.Windows.Forms.Button();
-            this.depsList = new System.Windows.Forms.ListBox();
-            this.assetGroup2Tab = new System.Windows.Forms.TabPage();
-            this.ag2Remove = new System.Windows.Forms.Button();
-            this.ag2Add = new System.Windows.Forms.Button();
-            this.assetList = new System.Windows.Forms.ListBox();
-            this.removeScene = new System.Windows.Forms.Button();
-            this.addScene = new System.Windows.Forms.Button();
-            this.sceneList = new System.Windows.Forms.ListBox();
-            this.stringListTab = new System.Windows.Forms.TabPage();
-            this.stringList = new System.Windows.Forms.ListBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.sceneListContainer = new System.Windows.Forms.SplitContainer();
-            this.depsSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.fileListTab.SuspendLayout();
-            this.sceneListTab.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.assetGroup1Tab.SuspendLayout();
-            this.assetGroup2Tab.SuspendLayout();
-            this.stringListTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sceneListContainer)).BeginInit();
-            this.sceneListContainer.Panel1.SuspendLayout();
-            this.sceneListContainer.Panel2.SuspendLayout();
-            this.sceneListContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.depsSplitContainer)).BeginInit();
-            this.depsSplitContainer.Panel1.SuspendLayout();
-            this.depsSplitContainer.Panel2.SuspendLayout();
-            this.depsSplitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            xBINSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            endiannessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            bigEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            littleEndianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            xBINVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            version2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            version4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            fdgVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            splitContainer1 = new System.Windows.Forms.SplitContainer();
+            sceneListContainer = new System.Windows.Forms.SplitContainer();
+            sceneList = new System.Windows.Forms.ListBox();
+            addScene = new System.Windows.Forms.Button();
+            removeScene = new System.Windows.Forms.Button();
+            sceneSplitContainer = new System.Windows.Forms.SplitContainer();
+            sceneName = new System.Windows.Forms.TextBox();
+            isPublic = new System.Windows.Forms.CheckBox();
+            tabControl2 = new System.Windows.Forms.TabControl();
+            assetGroup1Tab = new System.Windows.Forms.TabPage();
+            depsSplitContainer = new System.Windows.Forms.SplitContainer();
+            depsList = new System.Windows.Forms.ListBox();
+            ag1Add = new System.Windows.Forms.Button();
+            ag1Remove = new System.Windows.Forms.Button();
+            assetGroup2Tab = new System.Windows.Forms.TabPage();
+            splitContainer2 = new System.Windows.Forms.SplitContainer();
+            assetList = new System.Windows.Forms.ListBox();
+            ag2Add = new System.Windows.Forms.Button();
+            ag2Remove = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)sceneListContainer).BeginInit();
+            sceneListContainer.Panel1.SuspendLayout();
+            sceneListContainer.Panel2.SuspendLayout();
+            sceneListContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)sceneSplitContainer).BeginInit();
+            sceneSplitContainer.Panel1.SuspendLayout();
+            sceneSplitContainer.Panel2.SuspendLayout();
+            sceneSplitContainer.SuspendLayout();
+            tabControl2.SuspendLayout();
+            assetGroup1Tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)depsSplitContainer).BeginInit();
+            depsSplitContainer.Panel1.SuspendLayout();
+            depsSplitContainer.Panel2.SuspendLayout();
+            depsSplitContainer.SuspendLayout();
+            assetGroup2Tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
+            splitContainer2.Panel1.SuspendLayout();
+            splitContainer2.Panel2.SuspendLayout();
+            splitContainer2.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.xBINSettingsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(835, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, xBINSettingsToolStripMenuItem });
+            menuStrip1.Location = new System.Drawing.Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            menuStrip1.Size = new System.Drawing.Size(974, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { openToolStripMenuItem, saveToolStripMenuItem, saveAsToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O;
+            openToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            openToolStripMenuItem.Text = "Open";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Enabled = false;
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            saveToolStripMenuItem.Enabled = false;
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S;
+            saveToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            saveToolStripMenuItem.Text = "Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // saveAsToolStripMenuItem
             // 
-            this.saveAsToolStripMenuItem.Enabled = false;
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.saveAsToolStripMenuItem.Text = "Save As...";
-            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            saveAsToolStripMenuItem.Enabled = false;
+            saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            saveAsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.S;
+            saveAsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            saveAsToolStripMenuItem.Text = "Save As...";
+            saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
             // 
             // xBINSettingsToolStripMenuItem
             // 
-            this.xBINSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.endiannessToolStripMenuItem,
-            this.xBINVersionToolStripMenuItem});
-            this.xBINSettingsToolStripMenuItem.Name = "xBINSettingsToolStripMenuItem";
-            this.xBINSettingsToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.xBINSettingsToolStripMenuItem.Text = "XBIN Settings";
+            xBINSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { endiannessToolStripMenuItem, xBINVersionToolStripMenuItem, fdgVersionToolStripMenuItem });
+            xBINSettingsToolStripMenuItem.Name = "xBINSettingsToolStripMenuItem";
+            xBINSettingsToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            xBINSettingsToolStripMenuItem.Text = "XBIN Settings";
             // 
             // endiannessToolStripMenuItem
             // 
-            this.endiannessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bigEndianToolStripMenuItem,
-            this.littleEndianToolStripMenuItem});
-            this.endiannessToolStripMenuItem.Name = "endiannessToolStripMenuItem";
-            this.endiannessToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.endiannessToolStripMenuItem.Text = "Endianness";
+            endiannessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { bigEndianToolStripMenuItem, littleEndianToolStripMenuItem });
+            endiannessToolStripMenuItem.Name = "endiannessToolStripMenuItem";
+            endiannessToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            endiannessToolStripMenuItem.Text = "Endianness";
             // 
             // bigEndianToolStripMenuItem
             // 
-            this.bigEndianToolStripMenuItem.Name = "bigEndianToolStripMenuItem";
-            this.bigEndianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bigEndianToolStripMenuItem.Text = "Big Endian";
-            this.bigEndianToolStripMenuItem.Click += new System.EventHandler(this.bigEndianToolStripMenuItem_Click);
+            bigEndianToolStripMenuItem.Name = "bigEndianToolStripMenuItem";
+            bigEndianToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            bigEndianToolStripMenuItem.Text = "Big Endian";
+            bigEndianToolStripMenuItem.Click += bigEndianToolStripMenuItem_Click;
             // 
             // littleEndianToolStripMenuItem
             // 
-            this.littleEndianToolStripMenuItem.Name = "littleEndianToolStripMenuItem";
-            this.littleEndianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.littleEndianToolStripMenuItem.Text = "Little Endian";
-            this.littleEndianToolStripMenuItem.Click += new System.EventHandler(this.littleEndianToolStripMenuItem_Click);
+            littleEndianToolStripMenuItem.Name = "littleEndianToolStripMenuItem";
+            littleEndianToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            littleEndianToolStripMenuItem.Text = "Little Endian";
+            littleEndianToolStripMenuItem.Click += littleEndianToolStripMenuItem_Click;
             // 
             // xBINVersionToolStripMenuItem
             // 
-            this.xBINVersionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.version2ToolStripMenuItem,
-            this.version4ToolStripMenuItem});
-            this.xBINVersionToolStripMenuItem.Name = "xBINVersionToolStripMenuItem";
-            this.xBINVersionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xBINVersionToolStripMenuItem.Text = "XBIN Version";
+            xBINVersionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { version2ToolStripMenuItem, version4ToolStripMenuItem });
+            xBINVersionToolStripMenuItem.Name = "xBINVersionToolStripMenuItem";
+            xBINVersionToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            xBINVersionToolStripMenuItem.Text = "XData Version";
             // 
             // version2ToolStripMenuItem
             // 
-            this.version2ToolStripMenuItem.Name = "version2ToolStripMenuItem";
-            this.version2ToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.version2ToolStripMenuItem.Text = "Version 2 (RtDL to KPR)";
-            this.version2ToolStripMenuItem.Click += new System.EventHandler(this.version2ToolStripMenuItem_Click);
+            version2ToolStripMenuItem.Name = "version2ToolStripMenuItem";
+            version2ToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            version2ToolStripMenuItem.Text = "Version 2 (RtDL to KPR)";
+            version2ToolStripMenuItem.Click += version2ToolStripMenuItem_Click;
             // 
             // version4ToolStripMenuItem
             // 
-            this.version4ToolStripMenuItem.Name = "version4ToolStripMenuItem";
-            this.version4ToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.version4ToolStripMenuItem.Text = "Version 4 (KBR+)";
-            this.version4ToolStripMenuItem.Click += new System.EventHandler(this.version4ToolStripMenuItem_Click);
+            version4ToolStripMenuItem.Name = "version4ToolStripMenuItem";
+            version4ToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            version4ToolStripMenuItem.Text = "Version 4 (KBR+)";
+            version4ToolStripMenuItem.Click += version4ToolStripMenuItem_Click;
             // 
-            // tabControl1
+            // fdgVersionToolStripMenuItem
             // 
-            this.tabControl1.Controls.Add(this.fileListTab);
-            this.tabControl1.Controls.Add(this.sceneListTab);
-            this.tabControl1.Controls.Add(this.stringListTab);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 24);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(835, 476);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // fileListTab
-            // 
-            this.fileListTab.Controls.Add(this.splitContainer4);
-            this.fileListTab.Location = new System.Drawing.Point(4, 22);
-            this.fileListTab.Name = "fileListTab";
-            this.fileListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.fileListTab.Size = new System.Drawing.Size(827, 450);
-            this.fileListTab.TabIndex = 0;
-            this.fileListTab.Text = "File List";
-            this.fileListTab.UseVisualStyleBackColor = true;
-            // 
-            // removeFile
-            // 
-            this.removeFile.Location = new System.Drawing.Point(103, 3);
-            this.removeFile.Name = "removeFile";
-            this.removeFile.Size = new System.Drawing.Size(94, 31);
-            this.removeFile.TabIndex = 2;
-            this.removeFile.Text = "Remove";
-            this.removeFile.UseVisualStyleBackColor = true;
-            this.removeFile.Click += new System.EventHandler(this.removeFile_Click);
-            // 
-            // addFile
-            // 
-            this.addFile.Location = new System.Drawing.Point(3, 3);
-            this.addFile.Name = "addFile";
-            this.addFile.Size = new System.Drawing.Size(94, 31);
-            this.addFile.TabIndex = 1;
-            this.addFile.Text = "Add";
-            this.addFile.UseVisualStyleBackColor = true;
-            this.addFile.Click += new System.EventHandler(this.addFile_Click);
-            // 
-            // fileList
-            // 
-            this.fileList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fileList.FormattingEnabled = true;
-            this.fileList.Location = new System.Drawing.Point(0, 0);
-            this.fileList.Name = "fileList";
-            this.fileList.Size = new System.Drawing.Size(821, 398);
-            this.fileList.TabIndex = 0;
-            // 
-            // sceneListTab
-            // 
-            this.sceneListTab.Controls.Add(this.splitContainer1);
-            this.sceneListTab.Location = new System.Drawing.Point(4, 22);
-            this.sceneListTab.Name = "sceneListTab";
-            this.sceneListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sceneListTab.Size = new System.Drawing.Size(827, 450);
-            this.sceneListTab.TabIndex = 1;
-            this.sceneListTab.Text = "Scene Data";
-            this.sceneListTab.UseVisualStyleBackColor = true;
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.assetGroup1Tab);
-            this.tabControl2.Controls.Add(this.assetGroup2Tab);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(413, 444);
-            this.tabControl2.TabIndex = 4;
-            // 
-            // assetGroup1Tab
-            // 
-            this.assetGroup1Tab.Controls.Add(this.depsSplitContainer);
-            this.assetGroup1Tab.Location = new System.Drawing.Point(4, 22);
-            this.assetGroup1Tab.Name = "assetGroup1Tab";
-            this.assetGroup1Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.assetGroup1Tab.Size = new System.Drawing.Size(405, 418);
-            this.assetGroup1Tab.TabIndex = 0;
-            this.assetGroup1Tab.Text = "Dependencies";
-            this.assetGroup1Tab.UseVisualStyleBackColor = true;
-            // 
-            // ag1Remove
-            // 
-            this.ag1Remove.Location = new System.Drawing.Point(103, 3);
-            this.ag1Remove.Name = "ag1Remove";
-            this.ag1Remove.Size = new System.Drawing.Size(94, 31);
-            this.ag1Remove.TabIndex = 5;
-            this.ag1Remove.Text = "Remove";
-            this.ag1Remove.UseVisualStyleBackColor = true;
-            this.ag1Remove.Click += new System.EventHandler(this.ag1Remove_Click);
-            // 
-            // ag1Add
-            // 
-            this.ag1Add.Location = new System.Drawing.Point(3, 3);
-            this.ag1Add.Name = "ag1Add";
-            this.ag1Add.Size = new System.Drawing.Size(94, 31);
-            this.ag1Add.TabIndex = 4;
-            this.ag1Add.Text = "Add";
-            this.ag1Add.UseVisualStyleBackColor = true;
-            this.ag1Add.Click += new System.EventHandler(this.ag1Add_Click);
-            // 
-            // depsList
-            // 
-            this.depsList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.depsList.FormattingEnabled = true;
-            this.depsList.Location = new System.Drawing.Point(0, 0);
-            this.depsList.Name = "depsList";
-            this.depsList.Size = new System.Drawing.Size(399, 367);
-            this.depsList.TabIndex = 0;
-            // 
-            // assetGroup2Tab
-            // 
-            this.assetGroup2Tab.Controls.Add(this.splitContainer2);
-            this.assetGroup2Tab.Location = new System.Drawing.Point(4, 22);
-            this.assetGroup2Tab.Name = "assetGroup2Tab";
-            this.assetGroup2Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.assetGroup2Tab.Size = new System.Drawing.Size(405, 418);
-            this.assetGroup2Tab.TabIndex = 1;
-            this.assetGroup2Tab.Text = "Asset List";
-            this.assetGroup2Tab.UseVisualStyleBackColor = true;
-            // 
-            // ag2Remove
-            // 
-            this.ag2Remove.Location = new System.Drawing.Point(100, 4);
-            this.ag2Remove.Name = "ag2Remove";
-            this.ag2Remove.Size = new System.Drawing.Size(94, 31);
-            this.ag2Remove.TabIndex = 8;
-            this.ag2Remove.Text = "Remove";
-            this.ag2Remove.UseVisualStyleBackColor = true;
-            this.ag2Remove.Click += new System.EventHandler(this.ag2Remove_Click);
-            // 
-            // ag2Add
-            // 
-            this.ag2Add.Location = new System.Drawing.Point(0, 4);
-            this.ag2Add.Name = "ag2Add";
-            this.ag2Add.Size = new System.Drawing.Size(94, 31);
-            this.ag2Add.TabIndex = 7;
-            this.ag2Add.Text = "Add";
-            this.ag2Add.UseVisualStyleBackColor = true;
-            this.ag2Add.Click += new System.EventHandler(this.ag2Add_Click);
-            // 
-            // assetList
-            // 
-            this.assetList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.assetList.FormattingEnabled = true;
-            this.assetList.Location = new System.Drawing.Point(0, 0);
-            this.assetList.Name = "assetList";
-            this.assetList.Size = new System.Drawing.Size(399, 367);
-            this.assetList.TabIndex = 6;
-            // 
-            // removeScene
-            // 
-            this.removeScene.Location = new System.Drawing.Point(103, 3);
-            this.removeScene.Name = "removeScene";
-            this.removeScene.Size = new System.Drawing.Size(94, 31);
-            this.removeScene.TabIndex = 3;
-            this.removeScene.Text = "Remove";
-            this.removeScene.UseVisualStyleBackColor = true;
-            this.removeScene.Click += new System.EventHandler(this.removeScene_Click);
-            // 
-            // addScene
-            // 
-            this.addScene.Location = new System.Drawing.Point(3, 3);
-            this.addScene.Name = "addScene";
-            this.addScene.Size = new System.Drawing.Size(94, 31);
-            this.addScene.TabIndex = 2;
-            this.addScene.Text = "Add";
-            this.addScene.UseVisualStyleBackColor = true;
-            this.addScene.Click += new System.EventHandler(this.addScene_Click);
-            // 
-            // sceneList
-            // 
-            this.sceneList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sceneList.FormattingEnabled = true;
-            this.sceneList.Location = new System.Drawing.Point(0, 0);
-            this.sceneList.Name = "sceneList";
-            this.sceneList.Size = new System.Drawing.Size(404, 403);
-            this.sceneList.TabIndex = 0;
-            this.sceneList.SelectedIndexChanged += new System.EventHandler(this.sceneList_SelectedIndexChanged);
-            // 
-            // stringListTab
-            // 
-            this.stringListTab.Controls.Add(this.stringList);
-            this.stringListTab.Location = new System.Drawing.Point(4, 22);
-            this.stringListTab.Name = "stringListTab";
-            this.stringListTab.Size = new System.Drawing.Size(619, 361);
-            this.stringListTab.TabIndex = 2;
-            this.stringListTab.Text = "String List";
-            this.stringListTab.UseVisualStyleBackColor = true;
-            // 
-            // stringList
-            // 
-            this.stringList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stringList.FormattingEnabled = true;
-            this.stringList.Location = new System.Drawing.Point(0, 0);
-            this.stringList.Name = "stringList";
-            this.stringList.Size = new System.Drawing.Size(619, 361);
-            this.stringList.TabIndex = 0;
+            fdgVersionToolStripMenuItem.Name = "fdgVersionToolStripMenuItem";
+            fdgVersionToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            fdgVersionToolStripMenuItem.Text = "FDG Version 3";
+            fdgVersionToolStripMenuItem.Click += fdgVersionToolStripMenuItem_Click;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
+            splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            splitContainer1.Location = new System.Drawing.Point(0, 0);
+            splitContainer1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.sceneListContainer);
+            splitContainer1.Panel1.Controls.Add(sceneListContainer);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.tabControl2);
-            this.splitContainer1.Size = new System.Drawing.Size(821, 444);
-            this.splitContainer1.SplitterDistance = 404;
-            this.splitContainer1.TabIndex = 5;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.assetList);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.ag2Add);
-            this.splitContainer2.Panel2.Controls.Add(this.ag2Remove);
-            this.splitContainer2.Size = new System.Drawing.Size(399, 412);
-            this.splitContainer2.SplitterDistance = 367;
-            this.splitContainer2.TabIndex = 9;
+            splitContainer1.Panel2.Controls.Add(sceneSplitContainer);
+            splitContainer1.Size = new System.Drawing.Size(974, 553);
+            splitContainer1.SplitterDistance = 478;
+            splitContainer1.SplitterWidth = 5;
+            splitContainer1.TabIndex = 5;
             // 
             // sceneListContainer
             // 
-            this.sceneListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sceneListContainer.Location = new System.Drawing.Point(0, 0);
-            this.sceneListContainer.Name = "sceneListContainer";
-            this.sceneListContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            sceneListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            sceneListContainer.Location = new System.Drawing.Point(0, 0);
+            sceneListContainer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            sceneListContainer.Name = "sceneListContainer";
+            sceneListContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // sceneListContainer.Panel1
             // 
-            this.sceneListContainer.Panel1.Controls.Add(this.sceneList);
+            sceneListContainer.Panel1.Controls.Add(sceneList);
             // 
             // sceneListContainer.Panel2
             // 
-            this.sceneListContainer.Panel2.Controls.Add(this.addScene);
-            this.sceneListContainer.Panel2.Controls.Add(this.removeScene);
-            this.sceneListContainer.Size = new System.Drawing.Size(404, 444);
-            this.sceneListContainer.SplitterDistance = 403;
-            this.sceneListContainer.TabIndex = 4;
+            sceneListContainer.Panel2.Controls.Add(addScene);
+            sceneListContainer.Panel2.Controls.Add(removeScene);
+            sceneListContainer.Size = new System.Drawing.Size(478, 553);
+            sceneListContainer.SplitterDistance = 498;
+            sceneListContainer.SplitterWidth = 5;
+            sceneListContainer.TabIndex = 4;
+            // 
+            // sceneList
+            // 
+            sceneList.Dock = System.Windows.Forms.DockStyle.Fill;
+            sceneList.FormattingEnabled = true;
+            sceneList.ItemHeight = 15;
+            sceneList.Location = new System.Drawing.Point(0, 0);
+            sceneList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            sceneList.Name = "sceneList";
+            sceneList.Size = new System.Drawing.Size(478, 498);
+            sceneList.TabIndex = 0;
+            sceneList.SelectedIndexChanged += sceneList_SelectedIndexChanged;
+            // 
+            // addScene
+            // 
+            addScene.Location = new System.Drawing.Point(4, 3);
+            addScene.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            addScene.Name = "addScene";
+            addScene.Size = new System.Drawing.Size(110, 36);
+            addScene.TabIndex = 2;
+            addScene.Text = "Add";
+            addScene.UseVisualStyleBackColor = true;
+            addScene.Click += addScene_Click;
+            // 
+            // removeScene
+            // 
+            removeScene.Location = new System.Drawing.Point(120, 3);
+            removeScene.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            removeScene.Name = "removeScene";
+            removeScene.Size = new System.Drawing.Size(110, 36);
+            removeScene.TabIndex = 3;
+            removeScene.Text = "Remove";
+            removeScene.UseVisualStyleBackColor = true;
+            removeScene.Click += removeScene_Click;
+            // 
+            // sceneSplitContainer
+            // 
+            sceneSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            sceneSplitContainer.Location = new System.Drawing.Point(0, 0);
+            sceneSplitContainer.Name = "sceneSplitContainer";
+            sceneSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // sceneSplitContainer.Panel1
+            // 
+            sceneSplitContainer.Panel1.Controls.Add(sceneName);
+            sceneSplitContainer.Panel1.Controls.Add(isPublic);
+            // 
+            // sceneSplitContainer.Panel2
+            // 
+            sceneSplitContainer.Panel2.Controls.Add(tabControl2);
+            sceneSplitContainer.Size = new System.Drawing.Size(491, 553);
+            sceneSplitContainer.SplitterDistance = 26;
+            sceneSplitContainer.TabIndex = 5;
+            // 
+            // sceneName
+            // 
+            sceneName.Location = new System.Drawing.Point(3, 0);
+            sceneName.Name = "sceneName";
+            sceneName.Size = new System.Drawing.Size(411, 23);
+            sceneName.TabIndex = 1;
+            sceneName.TextChanged += sceneName_TextChanged;
+            // 
+            // isPublic
+            // 
+            isPublic.AutoSize = true;
+            isPublic.Location = new System.Drawing.Point(420, 4);
+            isPublic.Name = "isPublic";
+            isPublic.Size = new System.Drawing.Size(59, 19);
+            isPublic.TabIndex = 0;
+            isPublic.Text = "Public";
+            isPublic.UseVisualStyleBackColor = true;
+            isPublic.CheckedChanged += isPublic_CheckedChanged;
+            // 
+            // tabControl2
+            // 
+            tabControl2.Controls.Add(assetGroup1Tab);
+            tabControl2.Controls.Add(assetGroup2Tab);
+            tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            tabControl2.Location = new System.Drawing.Point(0, 0);
+            tabControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabControl2.Name = "tabControl2";
+            tabControl2.SelectedIndex = 0;
+            tabControl2.Size = new System.Drawing.Size(491, 523);
+            tabControl2.TabIndex = 4;
+            // 
+            // assetGroup1Tab
+            // 
+            assetGroup1Tab.Controls.Add(depsSplitContainer);
+            assetGroup1Tab.Location = new System.Drawing.Point(4, 24);
+            assetGroup1Tab.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            assetGroup1Tab.Name = "assetGroup1Tab";
+            assetGroup1Tab.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            assetGroup1Tab.Size = new System.Drawing.Size(483, 495);
+            assetGroup1Tab.TabIndex = 0;
+            assetGroup1Tab.Text = "Dependencies";
+            assetGroup1Tab.UseVisualStyleBackColor = true;
             // 
             // depsSplitContainer
             // 
-            this.depsSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.depsSplitContainer.Location = new System.Drawing.Point(3, 3);
-            this.depsSplitContainer.Name = "depsSplitContainer";
-            this.depsSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            depsSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            depsSplitContainer.Location = new System.Drawing.Point(4, 3);
+            depsSplitContainer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            depsSplitContainer.Name = "depsSplitContainer";
+            depsSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // depsSplitContainer.Panel1
             // 
-            this.depsSplitContainer.Panel1.Controls.Add(this.depsList);
+            depsSplitContainer.Panel1.Controls.Add(depsList);
             // 
             // depsSplitContainer.Panel2
             // 
-            this.depsSplitContainer.Panel2.Controls.Add(this.ag1Add);
-            this.depsSplitContainer.Panel2.Controls.Add(this.ag1Remove);
-            this.depsSplitContainer.Size = new System.Drawing.Size(399, 412);
-            this.depsSplitContainer.SplitterDistance = 367;
-            this.depsSplitContainer.TabIndex = 6;
+            depsSplitContainer.Panel2.Controls.Add(ag1Add);
+            depsSplitContainer.Panel2.Controls.Add(ag1Remove);
+            depsSplitContainer.Size = new System.Drawing.Size(475, 489);
+            depsSplitContainer.SplitterDistance = 435;
+            depsSplitContainer.SplitterWidth = 5;
+            depsSplitContainer.TabIndex = 6;
             // 
-            // splitContainer4
+            // depsList
             // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            depsList.Dock = System.Windows.Forms.DockStyle.Fill;
+            depsList.FormattingEnabled = true;
+            depsList.ItemHeight = 15;
+            depsList.Location = new System.Drawing.Point(0, 0);
+            depsList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            depsList.Name = "depsList";
+            depsList.Size = new System.Drawing.Size(475, 435);
+            depsList.TabIndex = 0;
+            depsList.MouseDoubleClick += depsList_MouseDoubleClick;
             // 
-            // splitContainer4.Panel1
+            // ag1Add
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.fileList);
+            ag1Add.Location = new System.Drawing.Point(4, 3);
+            ag1Add.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            ag1Add.Name = "ag1Add";
+            ag1Add.Size = new System.Drawing.Size(110, 36);
+            ag1Add.TabIndex = 4;
+            ag1Add.Text = "Add";
+            ag1Add.UseVisualStyleBackColor = true;
+            ag1Add.Click += depAdd_Click;
             // 
-            // splitContainer4.Panel2
+            // ag1Remove
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.addFile);
-            this.splitContainer4.Panel2.Controls.Add(this.removeFile);
-            this.splitContainer4.Size = new System.Drawing.Size(821, 444);
-            this.splitContainer4.SplitterDistance = 398;
-            this.splitContainer4.TabIndex = 3;
+            ag1Remove.Location = new System.Drawing.Point(120, 3);
+            ag1Remove.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            ag1Remove.Name = "ag1Remove";
+            ag1Remove.Size = new System.Drawing.Size(110, 36);
+            ag1Remove.TabIndex = 5;
+            ag1Remove.Text = "Remove";
+            ag1Remove.UseVisualStyleBackColor = true;
+            ag1Remove.Click += depRemove_Click;
+            // 
+            // assetGroup2Tab
+            // 
+            assetGroup2Tab.Controls.Add(splitContainer2);
+            assetGroup2Tab.Location = new System.Drawing.Point(4, 24);
+            assetGroup2Tab.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            assetGroup2Tab.Name = "assetGroup2Tab";
+            assetGroup2Tab.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            assetGroup2Tab.Size = new System.Drawing.Size(483, 495);
+            assetGroup2Tab.TabIndex = 1;
+            assetGroup2Tab.Text = "Asset List";
+            assetGroup2Tab.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            splitContainer2.Location = new System.Drawing.Point(4, 3);
+            splitContainer2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            splitContainer2.Name = "splitContainer2";
+            splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            splitContainer2.Panel1.Controls.Add(assetList);
+            // 
+            // splitContainer2.Panel2
+            // 
+            splitContainer2.Panel2.Controls.Add(ag2Add);
+            splitContainer2.Panel2.Controls.Add(ag2Remove);
+            splitContainer2.Size = new System.Drawing.Size(475, 489);
+            splitContainer2.SplitterDistance = 435;
+            splitContainer2.SplitterWidth = 5;
+            splitContainer2.TabIndex = 9;
+            // 
+            // assetList
+            // 
+            assetList.Dock = System.Windows.Forms.DockStyle.Fill;
+            assetList.FormattingEnabled = true;
+            assetList.ItemHeight = 15;
+            assetList.Location = new System.Drawing.Point(0, 0);
+            assetList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            assetList.Name = "assetList";
+            assetList.Size = new System.Drawing.Size(475, 435);
+            assetList.TabIndex = 6;
+            // 
+            // ag2Add
+            // 
+            ag2Add.Location = new System.Drawing.Point(4, 3);
+            ag2Add.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            ag2Add.Name = "ag2Add";
+            ag2Add.Size = new System.Drawing.Size(110, 36);
+            ag2Add.TabIndex = 7;
+            ag2Add.Text = "Add";
+            ag2Add.UseVisualStyleBackColor = true;
+            ag2Add.Click += fileAdd_Click;
+            // 
+            // ag2Remove
+            // 
+            ag2Remove.Location = new System.Drawing.Point(121, 3);
+            ag2Remove.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            ag2Remove.Name = "ag2Remove";
+            ag2Remove.Size = new System.Drawing.Size(110, 36);
+            ag2Remove.TabIndex = 8;
+            ag2Remove.Text = "Remove";
+            ag2Remove.UseVisualStyleBackColor = true;
+            ag2Remove.Click += fileRemove_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(splitContainer1);
+            panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Location = new System.Drawing.Point(0, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(974, 553);
+            panel1.TabIndex = 2;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 500);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kirby FDG Editor";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.fileListTab.ResumeLayout(false);
-            this.sceneListTab.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.assetGroup1Tab.ResumeLayout(false);
-            this.assetGroup2Tab.ResumeLayout(false);
-            this.stringListTab.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.sceneListContainer.Panel1.ResumeLayout(false);
-            this.sceneListContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sceneListContainer)).EndInit();
-            this.sceneListContainer.ResumeLayout(false);
-            this.depsSplitContainer.Panel1.ResumeLayout(false);
-            this.depsSplitContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.depsSplitContainer)).EndInit();
-            this.depsSplitContainer.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(974, 577);
+            Controls.Add(panel1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "MainForm";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Kirby FDG Editor";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            sceneListContainer.Panel1.ResumeLayout(false);
+            sceneListContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)sceneListContainer).EndInit();
+            sceneListContainer.ResumeLayout(false);
+            sceneSplitContainer.Panel1.ResumeLayout(false);
+            sceneSplitContainer.Panel1.PerformLayout();
+            sceneSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)sceneSplitContainer).EndInit();
+            sceneSplitContainer.ResumeLayout(false);
+            tabControl2.ResumeLayout(false);
+            assetGroup1Tab.ResumeLayout(false);
+            depsSplitContainer.Panel1.ResumeLayout(false);
+            depsSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)depsSplitContainer).EndInit();
+            depsSplitContainer.ResumeLayout(false);
+            assetGroup2Tab.ResumeLayout(false);
+            splitContainer2.Panel1.ResumeLayout(false);
+            splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
+            splitContainer2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -546,14 +504,6 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage fileListTab;
-        private System.Windows.Forms.TabPage sceneListTab;
-        private System.Windows.Forms.TabPage stringListTab;
-        private System.Windows.Forms.ListBox fileList;
-        private System.Windows.Forms.ListBox stringList;
-        private System.Windows.Forms.Button removeFile;
-        private System.Windows.Forms.Button addFile;
         private System.Windows.Forms.Button removeScene;
         private System.Windows.Forms.Button addScene;
         private System.Windows.Forms.ListBox sceneList;
@@ -577,7 +527,11 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer sceneListContainer;
         private System.Windows.Forms.SplitContainer depsSplitContainer;
-        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.SplitContainer sceneSplitContainer;
+        private System.Windows.Forms.TextBox sceneName;
+        private System.Windows.Forms.CheckBox isPublic;
+        private System.Windows.Forms.ToolStripMenuItem fdgVersionToolStripMenuItem;
     }
 }
 

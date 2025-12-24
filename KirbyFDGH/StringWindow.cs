@@ -12,7 +12,7 @@ namespace KirbyFDGH
 {
     public partial class StringWindow : Form
     {
-        public string input;
+        public string InputText;
 
         public StringWindow()
         {
@@ -21,7 +21,7 @@ namespace KirbyFDGH
 
         private void button1_Click(object sender, EventArgs e)
         {
-            input = inputString.Text;
+            InputText = inputString.Text;
             DialogResult = DialogResult.OK;
         }
     }
